@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+    ul{
+    font-size: 30px;
+    font-weight: bold;
+
+}
+
+</style>
+<script>
+i1t=0
+i2t=0
+i3t=0
+function qwe()
+{
+Obj=window.event.srcElement
+if(Obj.id.length==2)
+{ if(eval(Obj.id+"t==0"))
+ {
+
+Obj.insertAdjacentHTML("BeforeEnd",document.all[Obj.id+"1"].innerHTML)
+ eval(Obj.id+"t=1") }
+ else
+ {
+ Obj.children[0].outerHTML=""
+ eval(Obj.id+"t=0")}
+ }
+}
+</script>
+
+</head>
+<body>
+Раскрывающийся список
+<div id=i11 style="display:none"><ul><li>1.1<li>1.2<ul> </div>
+<div id=i21 style="display:none"><ul><li>2.1<li>2.2<ul> </div>
+<div id=i31 style="display:none"><ul><li>3.1<li>3.2<ul> </div>
+<ul onClick="qwe()">
+<li id=i1>1
+<li id=i2>2
+<li id=i3>3
+
+</body>
+    
+</html>
